@@ -11,6 +11,3 @@
 
 因為but.click 會報錯，找了一下資料改成driver.execute_script
 
-=======
---ver.1 登入帳號，模擬填寫問卷(需要之前有填過)--
-練習用 selenium 來模擬點擊登陸的畫面
