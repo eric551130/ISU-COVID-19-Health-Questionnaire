@@ -3,7 +3,7 @@ from tkinter import *
 import time
 import requests
 from bs4 import BeautifulSoup
-
+import time
 
 def AUTOFORM():
     user = enterusername.get()
@@ -30,6 +30,9 @@ def AUTOFORM():
     #time.sleep(2)
     formurl = "https://ci.isu.edu.tw/prev/prev_fill.asp"
     driver.get(formurl)
+
+    soup = BeautifulSoup(driver.page_source,'html.parser')
+    names = soup.find_all('label',class_='text-primary')
 
     time.sleep(1)
     # 填表單
